@@ -1,0 +1,61 @@
+form {
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Estilos generales para el select */
+select {
+  appearance: none; /* Eliminar el estilo predeterminado del navegador */
+  width: 100%; /* Hacer que ocupe todo el ancho disponible */
+  padding: 10px; /* Espacio interno */
+  font-size: 16px; /* Tamaño de fuente */
+  border: 2px solid #ccc; /* Borde alrededor del select */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: white; /* Fondo blanco */
+  color: #333; /* Color del texto */
+  outline: none; /* Quitar borde azul al enfocarse */
+  cursor: pointer; /* Mostrar cursor de selección */
+  transition: border-color 0.3s ease; /* Transición suave del borde */
+}
+
+/* Estilo cuando el select está enfocado */
+select:focus {
+  border-color: #007BFF; /* Color del borde al enfocarse */
+}
+
+/* Estilos adicionales para el select en dispositivos móviles */
+select::-ms-expand {
+  display: none; /* Ocultar el icono de desplegable en IE */
+}
+
+/* Estilo del contenedor del formulario */
+form div {
+  margin-bottom: 20px; /* Espaciado entre los campos */
+}
+
+/* Estilo para el botón */
+button {
+  background-color: #007BFF; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Quitar bordes */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de fuente */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor de selección */
+  transition: background-color 0.3s ease; /* Transición suave del color */
+}
+
+/* Cambio de color al pasar sobre el botón */
+button:hover {
+  background-color: #0056b3;
+}

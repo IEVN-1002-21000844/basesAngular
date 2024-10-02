@@ -1,0 +1,67 @@
+<div>
+  <form>
+    <div>
+      <label for="color1">Primera Banda</label>
+      <select id="color1" [(ngModel)]="color1" name="color1">
+        <option *ngFor="let color of colores" [value]="color">{{ color }}</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="color2">Segunda Banda</label>
+      <select id="color2" [(ngModel)]="color2" name="color2">
+        <option *ngFor="let color of colores" [value]="color">{{ color }}</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="color3">Tercera Banda</label>
+      <select id="color3" [(ngModel)]="color3" name="color3">
+        <option *ngFor="let color of colores" [value]="color">{{ color }}</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Tolerancia</label>
+      <div>
+        <label>
+          <input type="radio" [(ngModel)]="tolerancia" name="tolerancia" value="oro" /> Oro
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="tolerancia" name="tolerancia" value="plata" /> Plata
+        </label>
+      </div>
+    </div>
+
+    <button type="button" (click)="calcularValores()">Calcular</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Color1</th>
+        <th>Color2</th>
+        <th>Color3</th>
+        <th>Tolerancia</th>
+        <th>Valor</th>
+        <th>Valor Máximo</th>
+        <th>Valor Mínimo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td [ngStyle]="{'background-color': obtenerColorHex(color1)}">{{ color1 }}</td>
+        <td [ngStyle]="{'background-color': obtenerColorHex(color2)}">{{ color2 }}</td>
+        <td [ngStyle]="{'background-color': obtenerColorHex(color3)}">{{ color3 }}</td>
+
+        <td [ngStyle]="{'background-color': obtenerColorTolerancia()}">
+          {{ tolerancia === 'oro' ? 'Dorado 5%' : 'Plata 10%' }}
+        </td>
+
+        <td>{{ registro.valor }}</td>
+        <td>{{ registro.valorMax }}</td>
+        <td>{{ registro.valorMin }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
